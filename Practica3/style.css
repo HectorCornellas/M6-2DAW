@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    flex-direction: column; 
+}
+
+header {
+    background-color: #181818;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.logo {
+    width: 50px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.header-title {
+    font-size: 24px; 
+    margin: 0; 
+    margin-right: 20px; 
+    text-align: center; 
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin: 20px; 
+}
+
+.player, .playlist, .radio-list, .audio-controls {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #181818;
+    flex: 1 1 45%; 
+    box-sizing: border-box; 
+}
+
+.current-song {
+    display: flex;
+    align-items: center;
+}
+
+.current-song img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+input[type="range"] {
+    width: 100%; 
+    cursor: pointer;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #1DB954;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    background-color: #1D1D1D; 
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.filter-label {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.filter-select {
+    background-color: #242424;
+    border: 1px solid #1D1D1D;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-select:hover {
+    background-color: #1D1D1D;
+}

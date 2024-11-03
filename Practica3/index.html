@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Reproductor de Música</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="Spotify.png" alt="Logo" class="logo"> 
+        <h1 class="header-title">Mi Reproductor de Música</h1>
+    </header>
+    <div class="container">
+        <div class="player">
+            <h2>Reproductor</h2>
+            <div class="current-song">
+                <img id="song-img" src="Images/Foto1.jpeg" alt="Portada de la canción">
+                <div>
+                    <h3 id="song-title">Título de la canción</h3>
+                    <p id="song-artist">Artista</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button onclick="prevTrack()">Anterior</button>
+                <button onclick="togglePlayPause()">Play/Pause</button>
+                <button onclick="nextTrack()">Siguiente</button>
+                <input type="range" id="progress-bar" value="0" step="1" min="0">
+            </div>
+            <div id="timer">0:00 / 0:00</div>
+            <div class="audio-controls">
+                <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5">
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Lista de Reproducción</h2>
+            <div class="filter-container">
+                <label class="filter-label" for="sort-options">Ordenar por:</label>
+                <select id="sort-options" class="filter-select" onchange="sortSongs()">
+                    <option value="title">Título</option>
+                    <option value="artist">Artista</option>
+                </select>
+            </div>
+            <ul id="song-list"></ul>
+        </div>
+        <div class="radio-list">
+            <h2>Emisoras</h2>
+            <ul id="station-list"></ul> 
+        </div>
+        <div class="audio-controls">
+            <h2>Controles de Audio</h2>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <p>Creado por Héctor Cornellas</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
